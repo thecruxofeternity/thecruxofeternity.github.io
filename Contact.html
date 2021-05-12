@@ -1,0 +1,164 @@
+﻿<DOCTYPE! html>
+
+    <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+        <!-- Google Fonts-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Farro:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+        <!--FontAwesome-->
+        <script src="https://use.fontawesome.com/808114f81f.js"></script>
+
+        <script src="Scripts/jscript.js"></script>
+
+        <style>
+            .opacityLevel {
+                opacity: .4;
+            }
+
+            blockquote {
+                margin: 20px 0;
+                padding-left: 1.5rem;
+                border-left: 5px solid #4dd0e1;
+            }
+
+            #footer {
+                position: fixed;
+                left: 0px;
+                bottom: 0px;
+            }
+
+            .page-footer {
+                bottom: 0px;
+            }
+
+            button {
+                opacity: 1.0;
+            }
+        </style>
+    </head>
+
+    <body style="background-image: url('Images/foggyForest.jpg')">
+
+        <ul id='dropdown1' class='dropdown-content' style="margin-top:12px;">
+            <li><a href="Index.html">Home</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="Products.html">Books</a></li>
+            <li class="divider" tabindex="-1"></li>
+            <li><a href="Contact.html">Contact the Author</a></li>
+        </ul>
+        <nav class="grey darken-4">
+            <div class="nav-wrapper">
+                <a class='dropdown-button' data-beloworigin="true" href='#' data-activates='dropdown1' style="margin-left: 20px;">
+                    <i class="fa fa-bars fa-3x"></i>
+                </a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="https://www.twitter.com/"><i class="fa fa-twitter fa-2x"></i></a></li>
+                    <li style="margin-right: 40px;"><a href="https://www.facebook.com/"><i class="fa fa-facebook fa-2x"></i></a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div id="index-banner" style="margin-bottom: 200px;">
+            <div class="section no-pad-bot">
+                <div class="row">
+                    <div class="col s12">
+                        <div class="right">
+                            <a class="btn-floating btn-large waves-effect waves-light teal darken-1" data-target="create-email-modal"><i class="fa fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row"></div>
+                <div class="row container">
+                    <div class="col s12">
+                        <div class="card-panel teal darken-4 z-depth-5 center" style="opacity: .9; background: #0A1C19;">
+                            <h3 class="card-title white-text" style="font-family: 'Oswald', sans-serif; color: white;"><i class="prefix fa fa-key" style="margin-right: 10px;"></i>Contact the Author</h3>
+                            <div class="row">
+                                <div class="col s6 m6">
+                                    <div class="card-content z-depth-5 grey darken-4" style="margin:10%;">
+                                        <h4 style="font-family: 'Oswald', sans-serif; color: white; padding: 90px;">
+                                            Lane Trompeter<br />
+                                            Author/Teacher<br />
+                                            (407) 555-1234<br />
+                                        </h4>
+                                    </div>
+                                </div>
+                                <div class="col s6 m6">
+                                    <div class="card-content z-depth-5 grey darken-4" style="margin:10%;">
+                                        <h4 style="font-family: 'Oswald', sans-serif; color: white; padding: 90px;">
+                                            Need more information?<br /><br />
+                                            <button id="Email-Button" class="btn-large waves-effect waves-light teal" data-target="create-email-modal">Contact Me<i class="right fa fa-envelope"></i></button>
+                                        </h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <br><br>
+                </div>
+            </div>
+        </div>
+
+
+        <!--create an email modal-->
+        <div class="modal" id="create-email-modal">
+            <div class="modal-content">
+                <h4 style="margin-bottom: 50px; margin-left: 10px; font-family: 'Oswald', sans-serif;">Send new email</h4>
+                <div class="row">
+                    <form action="https://postmail.invotes.com/send" method="post" id="email_form">
+                        <div class="col s5" style="margin-bottom: 30px;">
+                            <i class="left prefix fa fa-user fa-2x"></i>
+                            <input type="text" name="reply_to" id="email-address" placeholder="Your Email Address">
+                        </div>
+                        <div class="col s5" style="margin-bottom: 30px;">
+                            <i class="left prefix fa fa-tag fa-2x"></i>
+                            <input type="text" name="subject" id="subject" placeholder="Subject">
+                        </div>
+                        <div class="row">
+                            <div class="col s12">
+                                <i class="left prefix fa fa-comment fa-2x"></i>
+                                <textarea id="textarea1" name="text" class="materialize-textarea" placeholder="Message"></textarea>
+                            </div>
+                        </div>
+                        <input type="hidden" name="access_token" value="ovj8r6zgtgplmnvvofjpp2kb" />
+                        <input type="hidden" name="success_url" value="Contact.html" />
+                        <input type="hidden" name="error_url" value=".?err=1" />
+                        <div class="modal-footer">
+                            <button class="btn waves-effect waves-light teal lighten-1" id="submit_form" type="submit" style="margin: 10px;">Send<i class="right fa fa-send"></i></button>
+                            <i></i>
+                            <button class="modal-action modal-close btn waves-effect waves-light teal lighten-1" type="button" style="margin: 10px;">Cancel<i class="right fa fa-remove"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer information and Copyright -->
+        <footer class="page-footer grey darken-4">
+            <div class="footer-copyright grey darken-3">
+                <div class="container">
+                    Copyright © 2021 Lane Trompeter & Matthew Fraley. All rights reserved.
+                    <a class="grey-text text-lighten-4 right" href="#!" onclick="openMailer()">Contact the webdev</a>
+                </div>
+            </div>
+        </footer>
+
+    </body>
