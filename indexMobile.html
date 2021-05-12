@@ -93,7 +93,7 @@
             }
 
             .page-footer {
-               background: #0A1C19;
+                background: #0A1C19;
             }
         </style>
     </head>
@@ -242,6 +242,13 @@
         </footer>
 
     </body>
+
+    <script>
+        //Redirect to desktop site if screen is large enough and page was accessed as mobile
+        if (screen.width > 700) {
+            document.location = "indexMobile.html";
+        }
+    </script>
 
 
 
