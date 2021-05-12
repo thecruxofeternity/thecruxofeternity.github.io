@@ -25,6 +25,12 @@ $(document).ready(function () {
         alignment: 'left', // Displays dropdown with edge aligned to the left of button
         stopPropagation: false // Stops event propagation
     });
+
+    $(".tabs").css('height', '70px');
+
+    //if (screen.width <= 700) {
+    //    document.location = "indexMobile.html";
+    //}
   });
 
 

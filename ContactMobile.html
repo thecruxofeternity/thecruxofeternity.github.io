@@ -1,0 +1,162 @@
+﻿<DOCTYPE! html>
+
+    <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+
+        <!-- jQuery -->
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+        <!-- Compiled and minified CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+
+        <!-- Compiled and minified JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+        <!-- Google Fonts-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Farro:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+        <!--FontAwesome-->
+        <script src="https://use.fontawesome.com/808114f81f.js"></script>
+
+        <script src="Scripts/jscript.js"></script>
+
+        <style>
+            .opacityLevel {
+                opacity: .4;
+            }
+
+            blockquote {
+                margin: 20px 0;
+                padding-left: 1.5rem;
+                border-left: 5px solid #4dd0e1;
+            }
+
+            #vidBackground {
+                object-fit: cover;
+                width: 100vw;
+                height: 100%;
+                position: fixed;
+                top: 0;
+                left: 0;
+                z-index:-1;
+            }
+
+            button {
+                opacity: 1.0;
+            }
+
+            footer {
+               display: block;
+               bottom: 0;
+            }
+        </style>
+    </head>
+
+    <body>
+
+        <video autoplay muted loop id="vidBackground">
+            <source src="VidBackgrounds/smoke.mp4" type="video/mp4">
+        </video>
+
+        <section class="fnavbar">
+            <nav-extended>
+                <div class="nav-wrapper">
+                    <div class="nav-content grey darken-4 z-depth-5" col xs12>
+                        <ul class="row tabs tabs-transparent z-depth-5">
+                            <li class="tab col s3"><a href="indexMobile.html" target="_self"><h5 style="margin-top:20px;">Home</h5></a></li>
+                            <li class="tab col s3"><a href="ProductsMobile.html" target="_self"><h5 style="margin-top:20px;">Books</h5></a></li>
+                            <li class="tab col s3"><a href="ContactMobile.html" target="_self" class="active"><h5 style="margin-top:20px; margin-right: 10px;">Contact Us</h5></a></li>
+                            <li class="col s1" style="margin-top: 10px; margin-left: 40px;"><a href="https://www.twitter.com/"><i class="fa fa-twitter fa-3x"></i></a></li>
+                            <li class="col s1" style="margin-top: 10px;"><a href="https://www.facebook.com/lanetrompeterwrites/"><i class="fa fa-facebook fa-3x"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav-extended>
+        </section>
+
+        <div id="index-banner" style="margin-bottom: 550px; margin-top: 10%;">
+            <div class="section no-pad-bot">
+                <div class="row">
+                    <div class="col s12">
+                    </div>
+                </div>
+                <div class="row"></div>
+                <div class="row container">
+                    <div class="col s12">
+                        <div class="card-panel teal darken-4 z-depth-5 center" style="opacity: .9; background: #0A1C19;">
+                            <h1 class="card-title white-text" style="font-family: 'Oswald', sans-serif; color: white;"><i class="prefix fa fa-key" style="margin-right: 20px; margin-bottom: 5%;"></i>Contact the Author</h1>
+                            <div class="row">
+                                <div class="card-content z-depth-5 grey darken-4" style="margin: 5%;">
+                                    <h2 style="font-family: 'Oswald', sans-serif; color: white; padding: 90px;">
+                                        Lane Trompeter<br />
+                                        Author/Teacher<br />
+                                        (407) 555-1234<br />
+                                    </h2>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="card-content z-depth-5 grey darken-4" style="margin-bottom:10%; margin: 5%;">
+                                    <h2 style="font-family: 'Oswald', sans-serif; color: white; padding: 90px;">
+                                        Need more information?
+                                    </h2>
+                                    <button id="Email-Button" class="z-index-5 btn-large waves-effect waves-light teal" data-target="create-email-modal" style="margin-bottom: 80px;">Contact Me<i class="right fa fa-envelope"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--create an email modal-->
+        <div class="modal" id="create-email-modal">
+            <div class="modal-content">
+                <h4 style="margin-bottom: 50px; margin-left: 10px; font-family: 'Oswald', sans-serif;">Send new email</h4>
+                <div class="row">
+                    <form action="https://postmail.invotes.com/send" method="post" id="email_form">
+                        <div class="col s5" style="margin-bottom: 30px;">
+                            <i class="left prefix fa fa-user fa-2x"></i>
+                            <input type="text" name="reply_to" id="email-address" placeholder="Your Email Address">
+                        </div>
+                        <div class="col s5" style="margin-bottom: 30px;">
+                            <i class="left prefix fa fa-tag fa-2x"></i>
+                            <input type="text" name="subject" id="subject" placeholder="Subject">
+                        </div>
+                        <div class="row">
+                            <div class="col s12">
+                                <i class="left prefix fa fa-comment fa-2x"></i>
+                                <textarea id="textarea1" name="text" class="materialize-textarea" placeholder="Message"></textarea>
+                            </div>
+                        </div>
+                        <input type="hidden" name="access_token" value="ovj8r6zgtgplmnvvofjpp2kb" />
+                        <input type="hidden" name="success_url" value="https://thecruxofeternity.github.io/Contact.html" />
+                        <input type="hidden" name="error_url" value=".?err=1" />
+                        <div class="modal-footer">
+                            <button class="btn waves-effect waves-light teal lighten-1" id="submit_form" type="submit" style="margin: 10px;">Send<i class="right fa fa-send"></i></button>
+                            <i></i>
+                            <button class="modal-action modal-close btn waves-effect waves-light teal lighten-1" type="button" style="margin: 10px;">Cancel<i class="right fa fa-remove"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer information and Copyright -->
+        <footer class="page-footer grey darken-4">
+            <div class="footer-copyright grey darken-3">
+                <div class="container">
+                    Copyright © 2021 Lane Trompeter & Matthew Fraley. All rights reserved.
+                    <a class="grey-text text-lighten-4 right" href="#!" onclick="openMailer()">Contact the webdev</a>
+                </div>
+            </div>
+        </footer>
+
+    </body>
