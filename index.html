@@ -86,6 +86,7 @@
                 width: auto !important;
                 height: auto !important;
                 background: #0A1C19;
+                min-width: 250px;
             }
 
             #vidBackground {
@@ -95,22 +96,21 @@
             .page-footer {
                background: #0A1C19;
             }
+
         </style>
     </head>
 
     <body>
 
-        <ul id='dropdown1' class='dropdown-content' style="margin-top:12px;">
-            <li><a href="index.html">Home</a></li>
-            <li class="divider" tabindex="-1"></li>
-            <li><a href="Products.html">Books</a></li>
-            <li class="divider" tabindex="-1"></li>
-            <li><a href="Contact.html">Contact the Author</a></li>
+        <ul id='dropdown1' class='dropdown-content z-depth-5'>
+            <li class="z-depth-2 waves-effect waves-light"><a href="index.html"><h5 style="color: white; font-family: 'Oswald', sans-serif;"><i class="fa fa-home" style="margin-right:20px;"></i>Home</h5></a></li>
+            <li class="z-depth-2 waves-effect waves-light"><a href="Products.html"><h5 style="color: white; font-family: 'Oswald', sans-serif;"><i class="fa fa-book" style="margin-right:20px;"></i>Books</h5></a></li>
+            <li class="z-depth-2 waves-effect waves-light"><a href="Contact.html"><h5 style="color: white; font-family: 'Oswald', sans-serif;"><i class="fa fa-envelope" style="margin-right:20px;"></i>Contact the Author</h5></a></li>
         </ul>
         <nav class="grey darken-4 z-depth-2">
             <div class="nav-wrapper">
-                <a class='dropdown-button' data-beloworigin="true" href='#' data-activates='dropdown1' style="margin-left: 20px;">
-                    <i class="fa fa-bars fa-3x"></i>
+                <a class='dropdown-button brand-logo left' data-beloworigin="true" href='#' data-activates='dropdown1' style="font-family: 'Oswald', sans-serif; margin-left: 20px;">
+                    <i class="fa fa-bars"></i>Menu
                 </a>
                 <ul id="nav-mobile" class="right">
                     <li><a href="https://www.twitter.com/"><i class="fa fa-twitter fa-2x"></i></a></li>
@@ -164,7 +164,13 @@
                         <h5 style="font-family: 'Oswald', sans-serif;">
                             eBook version is available
                         </h5>
-                        <a href="https://www.amazon.com/Crux-Eternity-Eternal-Dream-Book-ebook/dp/B094M951WG/ref=sr_1_1?dchild=1&keywords=the+crux+of+eternity&qid=1620825161&sr=8-1"><button class="modal-action btn-large waves-effect waves-light teal darken-1 z-depth-5 hoverable" style="margin: 10px; margin-left: 25px;">Buy Now<i class="right fa fa-amazon"></i></button></a>
+                        <a href="https://www.amazon.com/Crux-Eternity-Eternal-Dream-Book-ebook/dp/B094M951WG/ref=sr_1_1?dchild=1&keywords=the+crux+of+eternity&qid=1620825161&sr=8-1">
+                            <button class="modal-action btn-large waves-effect waves-light teal darken-1 z-depth-5 hoverable" style="        margin: 10px;
+        margin-left: 25px;
+">
+                                Buy Now<i class="right fa fa-amazon"></i>
+                            </button>
+                        </a>
                     </div>
                 </div>
             </div>

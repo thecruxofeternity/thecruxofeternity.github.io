@@ -69,6 +69,13 @@
                 position: relative;
                 z-index: 1;
             }
+
+           .dropdown-content {
+                width: auto !important;
+                height: auto !important;
+                background: #0A1C19;
+                min-width: 250px;
+            }
         </style>
     </head>
 
@@ -77,19 +84,17 @@
             <source src="VidBackgrounds/smoke.mp4" type="video/mp4">
         </video>
 
-        <ul id='dropdown1' class='dropdown-content' style="margin-top:12px;">
-            <li><a href="index.html">Home</a></li>
-            <li class="divider" tabindex="-1"></li>
-            <li><a href="Products.html">Books</a></li>
-            <li class="divider" tabindex="-1"></li>
-            <li><a href="Contact.html">Contact the Author</a></li>
+        <ul id='dropdown1' class='dropdown-content z-depth-5'>
+            <li class="z-depth-2 waves-effect waves-light"><a href="index.html"><h5 style="color: white; font-family: 'Oswald', sans-serif;"><i class="fa fa-home" style="margin-right:20px;"></i>Home</h5></a></li>
+            <li class="z-depth-2 waves-effect waves-light"><a href="Products.html"><h5 style="color: white; font-family: 'Oswald', sans-serif;"><i class="fa fa-book" style="margin-right:20px;"></i>Books</h5></a></li>
+            <li class="z-depth-2 waves-effect waves-light"><a href="Contact.html"><h5 style="color: white; font-family: 'Oswald', sans-serif;"><i class="fa fa-envelope" style="margin-right:20px;"></i>Contact the Author</h5></a></li>
         </ul>
-        <nav class="grey darken-4 z-depth-5">
+        <nav class="grey darken-4 z-depth-2">
             <div class="nav-wrapper">
-                <a class='dropdown-button' data-beloworigin="true" href='#' data-activates='dropdown1' style="margin-left: 20px;">
-                    <i class="fa fa-bars fa-3x"></i>
+                <a class='dropdown-button brand-logo left' data-beloworigin="true" href='#' data-activates='dropdown1' style="font-family: 'Oswald', sans-serif; margin-left: 20px;">
+                    <i class="fa fa-bars"></i>Menu
                 </a>
-                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <ul id="nav-mobile" class="right">
                     <li><a href="https://www.twitter.com/"><i class="fa fa-twitter fa-2x"></i></a></li>
                     <li style="margin-right: 40px;"><a href="https://www.facebook.com/lanetrompeterwrites/"><i class="fa fa-facebook fa-2x"></i></a></li>
                 </ul>
@@ -133,7 +138,7 @@
                             <div class="row">
                             </div>
                             <div class="row">
-                                <h2 class="center-align"; style="font-family: 'Oswald', sans-serif; color: white; padding: 90px;">
+                                <h2 class="center-align" ; style="font-family: 'Oswald', sans-serif; color: white; padding: 90px;">
                                     More coming soon...
                                 </h2>
                             </div>
@@ -155,7 +160,7 @@
                     <form action="https://postmail.invotes.com/send" method="post" id="email_form">
                         <div class="col s5" style="margin-bottom: 30px;">
                             <i class="left prefix fa fa-user fa-2x"></i>
-                            <input type="text" name="reply_to" id="email-address" placeholder="Your Email Address" class="validate">                            
+                            <input type="text" name="reply_to" id="email-address" placeholder="Your Email Address" class="validate">
                         </div>
                         <div class="col s5" style="margin-bottom: 30px;">
                             <i class="left prefix fa fa-tag fa-2x"></i>
@@ -173,7 +178,7 @@
                         <div class="modal-footer">
                             <button class="btn waves-effect waves-light teal lighten-1" id="submit_form" type="submit" style="margin: 10px;">Send<i class="right fa fa-send"></i></button>
                             <i></i>
-                            <button class="modal-action modal-close btn waves-effect waves-light teal lighten-1"type="button" style="margin: 10px;">Cancel<i class="right fa fa-remove"></i></button>
+                            <button class="modal-action modal-close btn waves-effect waves-light teal lighten-1" type="button" style="margin: 10px;">Cancel<i class="right fa fa-remove"></i></button>
                         </div>
                     </form>
                 </div>
