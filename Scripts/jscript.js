@@ -15,6 +15,10 @@ $(document).ready(function () {
         M.Dropdown.init(dropdowns);
     });
 
+    $(document).ready(function () {
+        $('.tabs').tabs({ swipeable: true });
+    });
+
     $('.dropdown-button').dropdown({
         inDuration: 300,
         outDuration: 225,
