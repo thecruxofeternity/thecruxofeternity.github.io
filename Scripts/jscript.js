@@ -16,7 +16,7 @@ $(document).ready(function () {
     });
 
     $(document).ready(function () {
-        $('.tabs').tabs({ swipeable: true });
+        $(".tabs").tabs({ swipeable: true });
     });
 
     $('.dropdown-button').dropdown({
