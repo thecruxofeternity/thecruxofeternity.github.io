@@ -57,9 +57,7 @@ function openMailer() {
     window.open("mailto:mattfraley@outlook.com?subject=TheCruxOfExternity_DevMail");
 }
 
-var circleTurn = document.getElementById("leftgear")
-
-window.addEventListener("scroll", function () {
-    circleTurn.style.transform = "rotate(" + window.pageYOffset + "deg)";
+$(window).scroll(function () {
+    var theta = $(window).scrollTop() / 10 % Math.PI;
+    $('#symbols').css({ transform: 'rotate(' + theta + 'rad)' });
 });
-
