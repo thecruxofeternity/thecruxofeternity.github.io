@@ -9,6 +9,9 @@
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
 
+        <!-- AJAX-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
         <!-- Compiled and minified CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
 
@@ -96,11 +99,11 @@
                 background: #0A1C19;
             }
 
-            .fnavbar{
+            .fnavbar {
                 position: fixed;
-                width:100%;
+                width: 100%;
                 top: 0%;
-                z-index:8;
+                z-index: 8;
             }
 
             .wrapper {
@@ -116,7 +119,7 @@
 
             .circle {
                 width: 110%;
-                height: 110%;                
+                height: 110%;
                 border-radius: 50%;
                 text-align: center;
                 vertical-align: middle;
@@ -242,36 +245,24 @@
             <h1 class="header">Join the mailing list</h1>
         </div>
         <div class="row center z-depth-5 grey darken-4" style="width: 80%; margin-bottom: 100px; color: white;">
-            <form style="margin-top: 40px;" action="https://postmail.invotes.com/send" method="post" id="email_form">
+            <form style="margin-top: 40px;" class="ajaxForm" action="https://formcarry.com/s/Ei9Car2RQDU" method="POST" id="MailingList">
                 <div class="row">
                 </div>
-                <div class="row" style="width: 50%; margin-top:40px;">
+                <div class="row" style="width: 60%; margin-top:40px;">
                     <div class="input-field">
-                        <input type="text" name="subject" id="subject" placeholder="Name" class="validate">
+                        <input type="text" name="Name" id="subject" placeholder="Name" class="validate">
                     </div>
                 </div>
                 <div class="row" style="width: 70%;">
                     <div class="input-field">
-                        <input id="textarea1" name="text" class="validate" placeholder="Email Address">
+                        <input id="textarea1" name="Email" class="validate" placeholder="Email Address">
                     </div>
                 </div>
-                <input type="hidden" name="access_token" value="ovj8r6zgtgplmnvvofjpp2kb" />
-                <input type="hidden" name="success_url" value="https://thecruxofeternity.github.io/indexMobile.html" />
-                <input type="hidden" name="error_url" value=".?err=1" />
                 <div class="row">
                     <button class="btn-large waves-effect waves-light teal darken-1">Join<i class="right fa fa-paper-plane"></i></button>
                 </div>
             </form>
         </div>
-
-        <script src="FileSaver.js"></script>
-        <script type="text/javascript">
-            function saveNewMailingListItem() {
-                var newEmail = document.getElementById("mailingList_email").value;
-                var blob = new Blob([newEmail + ";"], { type: "text/plain;charset=utf-8" });
-                saveAs(blob, "C:\\Users\\MattF\\Desktop\\LanePOC\\mailingList.txt");
-            }
-        </script>
 
         <!-- Footer information and Copyright -->
         <footer class="page-footer grey darken-4">
@@ -294,6 +285,26 @@
         $(window).scroll(function () {
             let image = document.getElementById("symbols");
             image.style.transform = "rotate(" + window.pageYOffset/12 + "deg)";
+        });
+
+        $(function () {
+            $(".ajaxForm").submit(function (e) {
+                e.preventDefault();
+                var href = $(this).attr("action");
+                $.ajax({
+                    type: "POST",
+                    dataType: "json",
+                    url: href,
+                    data: $(this).serialize(),
+                    success: function(response){
+                        if (response.status == "success") {
+                            window.location.href = 'https://theeternaldream.com/indexMobile.html'; 
+                        }else{
+                            alert("An error occured: " + response.message);
+                        }
+                    }
+                });
+            });
         });
     </script>
 
