@@ -1,17 +1,16 @@
 ﻿<DOCTYPE! html>
+    <!--google analytics-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ERW847K2BW"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-ERW847K2BW');
+    </script>
 
     <head>
         <meta charset="UTF-8">
-
-        <!--google analytics-->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-ERW847K2BW"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag() { dataLayer.push(arguments); }
-            gtag('js', new Date());
-
-            gtag('config', 'G-ERW847K2BW');
-        </script>
 
         <!-- jQuery -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
@@ -304,10 +303,10 @@
                     dataType: "json",
                     url: href,
                     data: $(this).serialize(),
-                    success: function(response){
+                    success: function (response) {
                         if (response.status == "success") {
-                            window.location.href = 'https://theeternaldream.com/index.html'; 
-                        }else{
+                            window.location.href = 'https://theeternaldream.com/index.html';
+                        } else {
                             alert("An error occured: " + response.message);
                         }
                     }
